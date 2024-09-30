@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Solar System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explore the Solar System</h1>
+    </header>
+
+    <main>
+        <h2>Planets</h2>
+        <ul class="planet-list">
+            <li onclick="showPlanetInfo('Mercury')">Mercury</li>
+            <li onclick="showPlanetInfo('Venus')">Venus</li>
+            <li onclick="showPlanetInfo('Earth')">Earth</li>
+            <li onclick="showPlanetInfo('Mars')">Mars</li>
+            <li onclick="showPlanetInfo('Jupiter')">Jupiter</li>
+            <li onclick="showPlanetInfo('Saturn')">Saturn</li>
+            <li onclick="showPlanetInfo('Uranus')">Uranus</li>
+            <li onclick="showPlanetInfo('Neptune')">Neptune</li>
+        </ul>
+
+        <div id="planet-info" style="display: none;">
+            <h2 id="planet-name"></h2>
+            <p id="planet-description"></p>
+            <img id="planet-image" src="" alt="Planet Image" style="display: none; width: 300px; height: auto;">
+        </div>
+
+        <h2>Space Quiz</h2>
+        <div class="quiz-container" id="quiz-container">
+            <div class="quiz-question" id="quiz-question">
+                <h3>Question will appear here</h3>
+            </div>
+            <ul class="options-list" id="options-list">
+                
+            </ul>
+            <button class="btn" id="next-button" style="display: none;" onclick="nextQuestion()">Next Question</button>
+            <div id="quiz-progress" style="margin-top: 20px;">
+                <div class="progress-bar" id="progress-bar" style="width: 0%; height: 10px; background: green;"></div>
+            </div>
+            <div class="quiz-results" id="quiz-results" style="display: none;">
+                <h3>Your Score: <span id="score"></span></h3>
+                <button onclick="startQuiz()">Restart Quiz</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Explore the Solar System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
